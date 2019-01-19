@@ -1,22 +1,25 @@
-import random
+# -*- coding: utf-8 -*-
+# 电脑出数字，小朋友猜数字
+# 另外一个 小朋友出数字，电脑猜数字
+import random # 大脑 产生随机数
 
-secret = random.randint(1,100)
-guess = 0
-tries = 0
+secret = random.randint(1,100)# 电脑出的一个整数，范围1~99
+guess = 0 # 小朋友猜的数字
+tries = 0 # 尝试的次数
 
-print "AHOY! I'm the Dread Pirate Roberts, and I have a secret!"
-print "It is a number from 1 to 99. I'll give you 6 tries."
+print("小朋友，你将我6次机会猜出我出的数字，范围在1~99之间，开始吧")
 
-while guess != secret and tries < 6:
-        guess = input("What's yet guess?")
-        if guess < secret:
-            print "Too low, ye scurvy dog!"
-        elif guess > secret:
-            print "Too high, landlubber!"
-        tries = tries + 1
+# 做游戏，游戏结束的两个条件，1.小朋友猜对了；2，6次机会用完了
+while guess != secret and tries < 6:  # 只要没猜对且机会没用完，游戏一直进行
+    guess = input("小朋友这次猜多少?")  # 获取小朋友猜的数字 
+    if guess < secret:  # 猜小了
+        print("小了")
+    elif guess > secret:# 猜大了
+        print("大了")
+    tries = tries + 1
         
 if guess == secret:
-    print "Avast! yet got it! Found my secret, yet did!"
+    print("恭喜你，小朋友，你猜对了")
 else:
-    print "No more guesses! Better luck next time, matey!"
-    print "The secret number was",secret
+    print("不要灰心，小朋友，看看答案是多少吧 ")
+    print(secret)
