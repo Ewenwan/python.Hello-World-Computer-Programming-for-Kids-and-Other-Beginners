@@ -1,5 +1,6 @@
-## python.Hello-World-Computer-Programming-for-Kids-and-Other-Beginners
+## Computer-Programming-for-Kids-and-Other-Beginners
 ## 学习python，关于《与孩子一起学编程》的代码
+中文书籍 链接：https://pan.baidu.com/s/1ZtNMKep-Zl62hKN18HzWUw 提取码：70us
 =================================================================================
     这个项目的初衷是实践极客时间陈皓的《左耳听风》专栏中[***“程序员练级攻略（2018）”***](http://gk.link/a/100HQ)
 
