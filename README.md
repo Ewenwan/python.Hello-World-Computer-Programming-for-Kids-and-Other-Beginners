@@ -122,10 +122,6 @@ teacher2
 teacher_2       除了字母、数字、_外不能用其他字符
 teaChen
 
-
-
-
-
 ```
 
 # 基本数学运算
@@ -170,20 +166,70 @@ teaChen
 ```
 
 # 数据类型
- 整数int()   小数float()   字符str()
+    内置函数实现类型强转
+    整数int()    从一个字符串或整数创建一个新的整数(自然数+0+负自然数) 
+    小数float()  从一个字符串或整数创建一个新的小数(浮点数 float 浮动的)
+    字符str()    从一个任意类型的数创建一个新的字符串
 ```python
->>>
+a=24        # 整数转浮点数
+b=float(a)
+print(b)
+>>> 24.0
+print(a)
+>>> 24
+
+c=38.6       # 浮点数转整数
+d=int(c)     直接砍掉小数部分
+print(d)
+>>> 38
+print(c)
+>>> 38.6
+
+h='99.9'    # 字符串转小数
+i=float(h) 
+print(i)
+>>> 99.9
+print(h)
+>>> '99.9'
+
+type(h) # 查看 数据 更多的信息
 ```
 
 
-
-
+# 输入
 ```python
->>>
+# 下朋友按键盘，这里会得到 按下的字符数组等
+someName = raw_input()  
+
+print('小朋友，你好，请输入你的名字')
+someBody = raw_input()
+print('你好 ',someBody,' 今天过得怎么样')
+
+# 更简单的，使用 raw_input直接打印提示语
+someBody = raw_input('小朋友，你好，请输入你的名字')
+
+# 输入数据
+ages = int(raw_input('小朋友，你好，请输入你的年龄'))
+print('小朋友都长这么大了','真好')
+
+# 3.0以后的版本， input() 得到的也只是字符串，需要使用一些函数进行转换才能得到数字
+
+
+# 从互联网 中的一个文件 得到输入=====
+# python2.0+========
+import urllib
+file = urllib.urlopen('http://helloworldbook.com/data/message.txt')
+message = file.read()
+print message 
+# python 3.0+=======
+import urllib.request
+file = urllib.request.urlopen('http://helloworldbook.com/data/message.txt')
+ssage = file.read()
+print message 
 ```
 
 
-
+# GUI 图形用户界面，可是化界面，人机交互界面，计算机的大脸蛋^_^
 
 ```python
 >>>
