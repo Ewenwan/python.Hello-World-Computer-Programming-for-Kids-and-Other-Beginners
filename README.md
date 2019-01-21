@@ -25,6 +25,10 @@
         
         开发工具：前期使用的是Python自带的工具IDLE，后期因为IDLE工具和Pygame模块退出有冲突问题，使用Sublime Text3编辑器
                  关于这个编辑器这里有一些介绍https://www.cnblogs.com/sgal/
+                 
+                 
+[SIGIA_4P学习 AIpython学习](https://github.com/Ewenwan/ShiYanLou/blob/master/learn_python/SIGIA_4P%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95.md)
+                 
 # 小试牛刀===
 
 > 命令 计算机 说话:   print 打印 命令
@@ -369,41 +373,176 @@ while 条件:
 
 ```
 
-# 游戏时间到了======
+# 列表====清单===购物清单===家庭成员列表
+
+```python
+shoppingList = ['苹果','香蕉','饼干'] # 购物清单
+family = ['妈妈','爸爸','小明','小红'] # 家庭成员列表
+luckyNumber = [5,6,8,10,12,666,888]   # 幸运数字
+friends = [] # 朋友列表
+friends.append('明明') # 添加 明明 这位朋友 friends = ['明明']
+friends.append('慧慧') # 添加 慧慧 这位朋友 friends = ['明明','慧慧']
+print(friends)
+>>>
+['明明','慧慧']
+print('小明的第一位朋友', friends[0]) # [] 访问朋友
+print('小明的第二位朋友', friends[1])
+
+# 列表切片 beg:end  索引范围为 beg,beg+1,...,end-1.
+# [:] 所有元素
+# [beg:]  索引范围为 beg,...,最后
+# [:end]  索引范围为 0,...,end-1
+
+# 修改 朋友
+friends[1] = '小慧' # 慧慧该名字了，改成了小慧
+
+# 增加元素==========
+append() 向列表末尾增加1个元素   
+     friends.append('小刚')          # friends = ['明明','慧慧','小刚']
+extend() 向列表末尾增加多个元素  
+     friends.extend(['小涛','小亮']) # friends = ['明明','慧慧','小刚','小涛','小亮']
+insert() 在列表中的某个位置增加1个元素 
+     friends.insert(2,'小磊')        # friends = ['明明','慧慧','小磊','小刚','小涛','小亮']
+
+# 删除元素====
+remove(指定元素)  删除指定元素
+     friends.('慧慧') # 和 慧慧 闹不开心了 friends = ['明明','小磊','小刚','小涛','小亮']
+del friends[2] 删除指定 索引位置
+     # friends = ['明明','小磊','小涛','小亮']
+pop(指定索引位置) 删除指定索引位置
+     friends.pop()  # 删除最后一个元素      friends = ['明明','小磊','小涛']
+     friends.pop(0) # 删除索引为0位置的元素 friends = ['小磊','小涛']
+
+# 查找 
+in 关键帧
+    if '小涛' in friends:
+        print('有小涛')
+    else
+        print('无')
+index() 查找索引  
+print friends.index('小磊') 
+>>> 
+0
+
+
+循环处理列表
+friends = ['明明','慧慧','小磊','小刚','小涛','小亮']
+print('小明的朋友有:')
+for friend in friends
+    print(friend)
+
+>>> 
+小明的朋友有:
+明明
+慧慧
+小磊
+小刚
+小涛
+小亮
+
+
+# 列表排序
+.sort()
+.reverse() # 正弦排序后 再 反着排列，逆序排列
+.sort(reverse = True)  # 直接传递参数，逆序排列
+
+# 排序函数
+有序列表 = sorted(列表对象实例) #返回一个有序列表，原列表不改变
+
+# 二维列表====
+
+```
+
+
+
+# 函数---积木---魔法黑盒子---法宝---
+
+```python
+def function_name(参数列表):
+    ...
+    return 返回参数
+
+# 变量作用域
+全局 global  公有
+nonlocal非公非私
+局部 local   私有
+
+
+```
+
+
+# 对象  属性(外观、大小、颜色、味道) 方法(子功能、各个小的特技、技能)
+```python
+class 对象类名字A:
+    # 对象初始化函数，比如小明一生下来，有嘴巴、眼睛、耳朵等
+    def __init__(self,***,***,***):
+        ... 
+    def 方法函数名:
+        ...
+        return ***
+    def
+    ...
+    
+    
+# 继承 父类的 特点---遗传----向父母学习---
+class B(A):
+    ...
+
+```
+
+
+# 模块 module 模块化 类包 、 函数包、方便使用、造好的轮子、积木桶
+```python
+import my_module  使用我的模块
+import my_module as md
+# 命名空间 
+frome my_module import *
+
+# 标准模球 
+time 时间模块
+import time
+time.sleep(2)
+
+
+random 随机数
+import random
+print(random.randint(0,100)) # 产生0~100之间的数，并打印
+
+
+```
+
+
+# Pygame 图形 游戏 包 =======
+```python
+import pygame
+pygame.init()
+screen = pygame.display.set_mode([640, 480])
+# 你可能会看到屏幕非常迅速地弹出了个窗口(填充为黑色〉
+# pygame 的作用就是为了建立游戏。游戏本身不做任何事情，只是与玩家交互。
+# 所以 pygame 有一个事件循环(event loop),不断检查用户在做什么，比如 按键 或者 移动鼠标
+
+import pygame
+pygame.init()
+screen = pygame.display.set_mode([640, 480])
+while True:
+    pass  # 是一个 python 关键字 ，表示"什么也不做"
+    
+# 动画开发
+# pygame.sprite 动画精灵====
+# pygame.event.get() 事件检测 鼠标 按键
+#  event.type == pygame.KEYDOWN     按键
+# event.type == pygame.MOUSEMOTION  鼠标移动
+
+# 声音
+pygame.mixer  # 声音合成器，混音器
+
+```
+
+# PythonCard GUI 组件 按钮 事件处理  菜单 
 
 ```python
 >>>
 ```
-
-```python
->>>
-```
-
-
-
-```python
->>>
-```
-
-
-
-```python
->>>
-```
-
-
-
-```python
->>>
-```
-
-
-
-```python
->>>
-```
-
-
 
 
 ```python
