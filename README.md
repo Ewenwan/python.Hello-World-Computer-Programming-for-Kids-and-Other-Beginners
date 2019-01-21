@@ -28,7 +28,10 @@
                  
                  
 [SIGIA_4P学习 AIpython学习](https://github.com/Ewenwan/ShiYanLou/blob/master/learn_python/SIGIA_4P%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95.md)
-                 
+
+
+[think python 思考 Python 像计算机科学家一样思考 1.1.22](https://github.com/wolfpython/thinkpython/blob/master/thinkpython/tex-zh/book.pdf)
+
 # 小试牛刀===
 
 > 命令 计算机 说话:   print 打印 命令
@@ -167,6 +170,11 @@ teaChen
 >>> 3e2 # 3 乘以 10 的平方
 300     # 3 * 10*10
 
+
+# 格式化打印
+number = 12.67
+print('整数 %i, 小数 %.1f,科学计数法 %e' % number,number,number)
+
 ```
 
 # 数据类型
@@ -230,6 +238,7 @@ import urllib.request
 file = urllib.request.urlopen('http://helloworldbook.com/data/message.txt')
 ssage = file.read()
 print message 
+
 ```
 
 
@@ -536,29 +545,28 @@ while True:
 # 声音
 pygame.mixer  # 声音合成器，混音器
 
+# 火箭飞船 燃料 速度 飞行距离 仿真模拟===
+
 ```
 
-# PythonCard GUI 组件 按钮 事件处理  菜单 
+# PythonCard GUI 组件 按钮 事件处理  菜单   电子宠物仿真，吃饭睡觉饥饿散步玩耍看病
+```python
+>>>
+```
 
+# 文件读写 txt bin   pickle存储列表数据
 ```python
 >>>
 ```
 
 
-```python
->>>
-```
-
-
-
+# random随机数 概率 不确定性 掷骰子  玩扑克牌 
 
 ```python
 >>>
 ```
 
-
-
-
+# Turtle 小乌龟可视化编程模块
 ```python
 >>>
 ```
